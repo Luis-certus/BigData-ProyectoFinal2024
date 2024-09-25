@@ -1,0 +1,9 @@
+{
+	"name": "LuisDavidGarciaInga",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b0142158-7412-479e-bec2-28296ca9d428",
+		"tenantId": "8a8a648e-ea69-4b0e-aa35-84d1cbb30b74"
+	}
+}
