@@ -79,7 +79,13 @@
 							"inputs": [
 								{
 									"referenceName": "Archivos_input_capa_bronce",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"Archivo_input": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
