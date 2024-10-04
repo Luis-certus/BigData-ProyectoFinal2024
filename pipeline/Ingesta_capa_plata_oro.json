@@ -1,10 +1,10 @@
 {
-	"name": "Ingesta_capa_bronce_plata",
+	"name": "Ingesta_capa_plata_oro",
 	"properties": {
-		"description": "Ingesta de archivos desde la capa bronce hacia la capa plata",
+		"description": "Ingesta de archivos desde la capa plata hacia la capa oro",
 		"activities": [
 			{
-				"name": "Ingesta_capaBronce_a_capaPlata",
+				"name": "Ingesta_capaPlata_a_capaOro",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -16,7 +16,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/luisgarciaindustrial@outlook.com/Trabajofinal_IngestaCapaBronce_a_CapaPlata"
+					"notebookPath": "/Users/luisgarciaindustrial@outlook.com/Trabajofinal_IngestaCapaPlata_a_CapaOro"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks_DataFactory",
