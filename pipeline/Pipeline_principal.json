@@ -1,6 +1,71 @@
 {
 	"name": "Pipeline_principal",
 	"properties": {
+		"description": "Ejecuta las 3 canalizaciones\n",
+		"activities": [
+			{
+				"name": "Ingesta_capa_bronce_plata",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "INGESTA_input_capa_bronce",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "Ingesta_capa_bronce_plata",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "INGESTA_input_capa_bronce",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "INGESTA_input_capa_bronce",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Ingesta_capa_plata_oro",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Ingesta_capa_bronce_plata",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "Ingesta_capa_plata_oro",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
 		"annotations": []
 	}
 }
