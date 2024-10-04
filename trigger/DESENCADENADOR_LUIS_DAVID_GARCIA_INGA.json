@@ -1,0 +1,25 @@
+{
+	"name": "DESENCADENADOR_LUIS_DAVID_GARCIA_INGA",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Pipeline_principal",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 8,
+				"startTime": "2024-10-04T07:59:00",
+				"endTime": "2024-10-08T07:59:00",
+				"timeZone": "SA Pacific Standard Time"
+			}
+		}
+	}
+}
